@@ -1,20 +1,20 @@
 import {
-  JsonRpcApiProvider,
   JsonRpcApiProviderOptions,
   JsonRpcError,
   JsonRpcPayload,
   JsonRpcResult,
 } from 'ethers';
+import {JsonRpcApiPollingProvider} from 'ethers/lib.esm/providers/provider-jsonrpc';
 import {ethers as v5} from 'ethers-v5';
 
-export class JsonRpcProviderV5Wrapper extends JsonRpcApiProvider {
+export class JsonRpcProviderV5Wrapper extends JsonRpcApiPollingProvider {
   #private: v5.providers.JsonRpcProvider;
 
   constructor(
     provider: v5.providers.JsonRpcProvider,
     options?: JsonRpcApiProviderOptions
   ) {
-    super(provider.network, options);
+    super(provider.network, options as any);
     this.#private = provider;
   }
 

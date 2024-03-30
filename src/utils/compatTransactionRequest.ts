@@ -1,5 +1,5 @@
 import {TransactionRequest} from 'ethers';
-import {TransactionRequest as V5TransactionRequest} from '@ethersproject/abstract-provider';
+import type {TransactionRequest as V5TransactionRequest} from '@ethersproject/abstract-provider';
 import {compatAddress} from './compatAddress';
 import {compatNull} from './compatNull';
 import {compatNumber} from './compatNumber';

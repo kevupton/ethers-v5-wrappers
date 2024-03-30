@@ -1,5 +1,5 @@
 import {Provider, TransactionResponse} from 'ethers';
-import {TransactionResponse as V5TransactionResponse} from '@ethersproject/abstract-provider';
+import type {TransactionResponse as V5TransactionResponse} from '@ethersproject/abstract-provider';
 import {formatTransactionResponse} from './format';
 //
 // {

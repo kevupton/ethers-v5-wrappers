@@ -5,13 +5,13 @@ import {
   JsonRpcPayload,
   JsonRpcResult,
 } from 'ethers';
-import {ethers as v5} from 'ethers-v5';
+import {JsonRpcProvider as JsonRpcProviderV5} from '@ethersproject/providers';
 
 export class JsonRpcProviderV5Wrapper extends JsonRpcApiProvider {
-  #private: v5.providers.JsonRpcProvider;
+  #private: JsonRpcProviderV5;
 
   constructor(
-    provider: v5.providers.JsonRpcProvider,
+    provider: JsonRpcProviderV5,
     options?: JsonRpcApiProviderOptions
   ) {
     super(provider.network, options as any);

@@ -19,13 +19,12 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "ethers": ">=6.0.0"
-  },
-  "dependencies": {
-    "ethers-v5": "npm:ethers@^5.7.2"
+    "ethers": ">=6.0.0",
+    "@ethersproject/providers": ">=5"
   },
   "devDependencies": {
-    "@ethersproject/abstract-provider": "^5.7.0",
+    "@ethersproject/providers": "5.7.2",
+    "@ethersproject/abstract-provider": "5.7.0",
     "@types/node": "20.8.2",
     "ethers": "^6.11.1",
     "gts": "^5.2.0",

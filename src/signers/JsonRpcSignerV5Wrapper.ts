@@ -11,20 +11,22 @@ import {
   TypedDataDomain,
   TypedDataField,
 } from 'ethers';
-import {providers} from 'ethers-v5';
-import {compatTransactionRequest} from '../utils/compatTransactionRequest';
-import {populate} from '../utils';
-import {compatTypedDataDomain} from '../utils/compatTypedDataDomain';
-import {compatTransactionResponse} from '../utils/compatTransactionResponse';
-import {JsonRpcProviderV5Wrapper} from '../providers/JsonRpcProviderV5Wrapper'; // Assuming ethers v6 is the "ethers" package
+import {JsonRpcSigner as JsonRpcSignerV5} from '@ethersproject/providers';
+import {
+  compatTransactionRequest,
+  compatTransactionResponse,
+  compatTypedDataDomain,
+  populate,
+} from '../utils';
+import {JsonRpcProviderV5Wrapper} from '../providers'; // Assuming ethers v6 is the "ethers" package
 
 export class JsonRpcSignerV5Wrapper implements JsonRpcSigner {
-  readonly #signer: providers.JsonRpcSigner;
+  readonly #signer: JsonRpcSignerV5;
 
   public readonly address: string;
   readonly provider: JsonRpcApiProvider;
 
-  constructor(signer: providers.JsonRpcSigner) {
+  constructor(signer: JsonRpcSignerV5) {
     this.#signer = signer;
     this.address = signer._address;
     this.provider = new JsonRpcProviderV5Wrapper(signer.provider);

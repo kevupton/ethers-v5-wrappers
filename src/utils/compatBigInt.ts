@@ -1,9 +1,9 @@
 import {BigNumberish} from 'ethers';
-import {ethers as v5} from 'ethers-v5';
+import {BigNumberish as BigNumberishV5} from '@ethersproject/bignumber';
 
 export const compatBigInt = (
   value: BigNumberish | undefined
-): v5.BigNumberish | undefined => {
+): BigNumberishV5 | undefined => {
   if (typeof value === 'bigint') {
     return value.toString();
   }

@@ -4,7 +4,7 @@ import {compatAddress} from './compatAddress';
 import {compatNull} from './compatNull';
 import {compatNumber} from './compatNumber';
 import {compatBigInt} from './compatBigInt';
-import {Deferrable} from 'ethers-v5/lib/utils';
+import {Deferrable} from '@ethersproject/properties';
 
 export const compatTransactionRequest = ({
   to,

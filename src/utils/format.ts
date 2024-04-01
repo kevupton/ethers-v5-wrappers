@@ -22,7 +22,7 @@ import {
   Signature,
   zeroPadValue,
 } from 'ethers';
-import {BigNumber} from 'ethers-v5';
+import {BigNumber} from '@ethersproject/bignumber';
 
 const BN_0 = BigInt(0);
 

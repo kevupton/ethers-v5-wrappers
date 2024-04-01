@@ -8,6 +8,15 @@ devDependencies:
   '@ethersproject/abstract-provider':
     specifier: 5.7.0
     version: 5.7.0
+  '@ethersproject/abstract-signer':
+    specifier: 5.7.0
+    version: 5.7.0
+  '@ethersproject/bignumber':
+    specifier: 5.7.0
+    version: 5.7.0
+  '@ethersproject/properties':
+    specifier: 5.7.0
+    version: 5.7.0
   '@ethersproject/providers':
     specifier: 5.7.2
     version: 5.7.2

@@ -1,6 +1,6 @@
 {
   "name": "ethers-v5-wrappers",
-  "version": "1.0.0-rc.5",
+  "version": "1.0.0-rc.6",
   "description": "",
   "main": "build/index.js",
   "typings": "build/index.d.ts",

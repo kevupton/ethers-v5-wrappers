@@ -32,7 +32,7 @@ export class JsonRpcProviderV5Wrapper extends JsonRpcApiProvider {
             : Object.values(item.params);
           return {
             id: item.id,
-            result: this.#private.send(item.method, params),
+            result: await this.#private.send(item.method, params),
           };
         } catch (e: any) {
           return {
